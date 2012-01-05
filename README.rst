@@ -6,9 +6,9 @@ sphinx-bootstrap
 Install
 --------
 
-Copy the ``sphinx-boostrap`` fold to your ``themes`` directory.
+1. Copy the ``sphinx-boostrap`` fold to your ``themes`` directory.
 
-Add the following lines to your ``config.py`` file::
+2. Add the following lines to your ``config.py`` file::
 
     # The theme to use for HTML and HTML Help pages.  See the documentation for
     # a list of builtin themes.
