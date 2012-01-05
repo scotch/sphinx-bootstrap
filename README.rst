@@ -7,7 +7,6 @@ Install
 --------
 
 ```python
-
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 html_theme = 'sphinx-bootstrap'
@@ -23,7 +22,6 @@ html_theme_options = {
     'home_url': 'http://code.scotchmedia.com/engineauth',
     'disqus_shortname': 'scotchmedia',
 }
-
 ```
 License
 -------
