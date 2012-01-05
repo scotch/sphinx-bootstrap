@@ -3,6 +3,12 @@ sphinx-bootstrap
 
 `Sphinx <http://sphinx.pocoo.org/>`_ theme adapted from `Twitter's Bootstrap <twitter.github.com/bootstrap/>`_
 
+Demo
+----
+Projects using it:
+~~~~~~~~~~~~~~~
+- `EngineAuth <http://code.scotchmedia.com/engineauth>`
+
 Install
 --------
 
