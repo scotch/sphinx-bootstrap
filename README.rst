@@ -7,7 +7,7 @@ Demo
 ----
 Projects using it:
 ~~~~~~~~~~~~~~~
-- `EngineAuth <http://code.scotchmedia.com/engineauth>`
+- `EngineAuth <http://code.scotchmedia.com/engineauth>`_
 
 Install
 --------
