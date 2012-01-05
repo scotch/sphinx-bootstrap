@@ -24,11 +24,11 @@ Install
     # further.  For a list of options available for each theme, see the
     # documentation.
     html_theme_options = {
-        'analytics_code': 'UA-28004779-1',
+        'analytics_code': 'UA-00000000-1',
         'github_user': 'scotch',
-        'github_repo': 'engineauth',
+        'github_repo': 'sphinx-bootstrap',
         'twitter_username': 'scotchmedia',
-        'home_url': 'http://code.scotchmedia.com/engineauth',
+        'home_url': 'http://code.scotchmedia.com/sphinx-bootstrap',
         'disqus_shortname': 'scotchmedia',
     }
 
