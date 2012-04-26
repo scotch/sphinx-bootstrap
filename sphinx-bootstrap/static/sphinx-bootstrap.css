@@ -12,14 +12,31 @@ a:hover, .nav a:hover {
 .navbar-inner {
     background: #fff;
     background-color: #fff;
+    height: 45px;
 }
 
 .navbar .brand {
     color: #0E84B5;
     font-size: 25px;
     font-weight: normal;
-    font-family: 'Crete Round', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /*font-family: 'Crete Round', "Helvetica Neue", Helvetica, Arial, sans-serif;*/
 }
+
+.navbar .brand a:hover, .navbar ul .active > a {
+    color: #0E84B5;
+    text-decoration: none;
+}
+
+/*.navbar .brand {*/
+    /*float: left;*/
+    /*display: block;*/
+    /*padding: 8px 20px 12px;*/
+    /*margin-left: -20px;*/
+    /*font-size: 20px;*/
+    /*font-weight: 200;*/
+    /*line-height: 1;*/
+    /*color: #ffffff;*/
+/*}*/
 
 .nav a {
     text-shadow: none;
@@ -40,13 +57,16 @@ a:hover, .nav a:hover {
     box-shadow: inset 0 5px 15px rgba(0, 0, 0, .025);
 }
 
+.row-odd {
+    background-color: #fafafa;
+}
 .footer p {
     color: #555;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
-    font-family: 'Crete Round', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /*font-family: 'Crete Round', "Helvetica Neue", Helvetica, Arial, sans-serif;*/
     padding-bottom: .3em;
 }
 
@@ -63,9 +83,9 @@ span.pre {
     color: #007000;
 }
 
-th, td {
-    border-top: 1px solid #efefef;
-}
+/*th, td {*/
+    /*border-top: 1px solid #efefef;*/
+/*}*/
 
 div.admonition {
     margin: 1em 0 0 0;
@@ -73,25 +93,23 @@ div.admonition {
 }
 
 div.admonition.note {
-
     background-color: #fffbe0;
 }
 
 div.admonition.warning {
     background-color: #ffe0d7;
-
 }
 
 div.admonition p {
-    margin: 0 0 1em;
+    margin: 1em;
     padding: 0;
 }
+p.admonition-title {
+    display: none;
+}
 
-div.admonition p.admonition-title {
-    margin: 0;
-    padding: 1em;
+.descname {
     font-weight: bold;
-    font-style: italic;
 }
 
 a.headerlink {
@@ -119,6 +137,16 @@ a.headerlink:hover {
 
 .viewcode-link, .viewcode-back {
     float: right;
+}
+
+tr > td:first-child {
+    font-family: monospace;
+    color: #007000;
+}
+
+tr > td:nth-child(2) {
+    font-family: monospace;
+    color: #4070A0;
 }
 
 .quick-links {

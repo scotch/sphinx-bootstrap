@@ -8,7 +8,7 @@
     <div class="related{% if bottom %} related-bottom{% endif %}">
         <ul class="nav">
             {%- block rootrellink %}
-                <li><a class="brand"
+                <li class="active"><a class="brand"
                        href="{{ pathto(master_doc) }}">{{ project|e }}</a></li>
             {%- endblock %}
             {%- for rellink in rellinks %}
@@ -102,18 +102,17 @@
                 HAS_SOURCE:  {{ has_source|lower }}
             };
         </script>
-        {%- for scriptfile in script_files %}
-            <script type="text/javascript"
-                    src="{{ pathto(scriptfile, 1) }}"></script>
+        {%- for scriptfile in script_files + ["_static/bootstrap-dropdown.js"] %}
+            <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
         {%- endfor %}
+
         {%- if use_opensearch %}
             <link rel="search" type="application/opensearchdescription+xml"
                   title="{% trans docstitle=docstitle|e %}Search within {{ docstitle }}{% endtrans %}"
                   href="{{ pathto('_static/opensearch.xml', 1) }}"/>
         {%- endif %}
         {%- if favicon %}
-            <link rel="shortcut icon"
-                  href="{{ pathto('_static/' + favicon, 1) }}"/>
+            <link rel="shortcut icon" href="{{ pathto('_static/' + favicon, 1) }}"/>
         {%- endif %}
     {%- endif %}
     {%- block linktags %}
@@ -143,30 +142,50 @@
         {%- endif %}
     {%- endblock %}
     {%- block extrahead %} {% endblock %}
-    <script type="text/javascript"
-            src="https://apis.google.com/js/plusone.js"></script>
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+    {% if theme_analytics_code %}
+        <!-- analytics -->
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', '{{ theme_analytics_code }}']);
+            {% if theme_analytics_domain %}
+                _gaq.push(['_setDomainName', '{{ theme_analytics_domain }}']);
+            {% endif %}
+            _gaq.push(['_trackPageview']);
+
+            (function () {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+    {% endif %}
 </head>
 <body>
 
 
 {%- block header %}
-    <div id="header">
-        {%- block headerlogo %}
-            {%- if logo %}
-                <p class="logo"><a href="{{ pathto(master_doc) }}">
-                    <img class="logo" src="{{ pathto('_static/' + logo, 1) }}"
-                            {% if theme_logo_width %}
-                         width="{{ theme_logo_width }}"{% endif %}
-                    {% if theme_logo_height %}
-                         height="{{ theme_logo_height }}"{% endif %}
-                         alt="{{ project|e }}" title="{{ project|e }}"/>
-                </a></p>
-            {%- endif %}
-        {%- endblock %}
-    </div>
+
     <div class="navbar">
         <div class="navbar-inner">
             <div class="container">
+
+                {%- block headerlogo %}
+                    {%- if logo %}
+                        <a href="{{ pathto(master_doc) }}">
+                            <img class="logo" src="{{ pathto('_static/' + logo, 1) }}"
+                            {% if theme_logo_width %} width="{{ theme_logo_width }}"{% endif %}
+                            {% if theme_logo_height %} height="{{ theme_logo_height }}"{% endif %}
+                            alt="{{ project|e }}" title="{{ project|e }}"/>
+                        </a>
+                    {%- else %}
+{#                        <a class="brand" href="./index.html">Bootstrap</a>#}
+                    {%- endif %}
+                {%- endblock %}
+
                 {%- block relbar1 %}{{ relbar() }}{% endblock %}
                 <div class="pull-right">
                     {{ seachbox() }}
@@ -290,23 +309,12 @@
     </script>
 {% endif %}
 
-{% if theme_analytics_code %}
-    <!-- analytics -->
-    <script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', '{{ theme_analytics_code }}']);
-        _gaq.push(['_trackPageview']);
-
-        (function () {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
-    </script>
-{% endif %}
+<script type="text/javascript">
+    $('.nav .active').on('click', function () {
+        e.preventDefault()
+        $(this).siblings().toggle()
+    });
+</script>
 
 <!-- plusone -->
 <script type="text/javascript">
