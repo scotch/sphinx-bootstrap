@@ -40,9 +40,10 @@ Install
     /*@import "bootstrap-default.min.css";*/
     /*@import "bootstrap-sapling.css";*/
 
-### Themes
+Themes
+~~~~~~
 
-New themes can be created using the [bootstrap customizer](http://twitter.github.com/bootstrap/customize.html)
+New themes can be created using the `bootstrap customizer <http://twitter.github.com/bootstrap/customize.html>`_
 
 Once you have created a custom theme include it in that static
 directory and change the link the @import link. If you think the
