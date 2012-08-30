@@ -32,8 +32,7 @@ Install
         'disqus_shortname': 'scotchmedia',
     }
 
-3. Choose your theme.
-  Edit `sphinx-bootstrap.css` at the top of the file you will see this:
+3. Choose your theme. Edit `sphinx-bootstrap.css`. At the top of the file you will see this:
 
     @import "bootstrap-engineauth.min.css";
     /*@import "bootstrap-default.min.css";*/
