@@ -8,8 +8,7 @@
     <div class="related{% if bottom %} related-bottom{% endif %}">
         <ul class="nav">
             {%- block rootrellink %}
-                <li class="active"><a class="brand"
-                       href="{{ pathto(master_doc) }}">{{ project|e }}</a></li>
+                <li class=""><a class="brand" href="{{ pathto(master_doc) }}">{{ project|e }}</a></li>
             {%- endblock %}
             {%- for rellink in rellinks %}
                 <li>
@@ -169,7 +168,7 @@
 
 {%- block header %}
 
-    <div class="navbar">
+    <div class="navbar navbar-static-top">
         <div class="navbar-inner">
             <div class="container">
 
