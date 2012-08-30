@@ -41,7 +41,7 @@ Install
     /*@import "bootstrap-sapling.css";*/
 
 Themes
-~~~~~~
+------
 
 New themes can be created using the `bootstrap customizer <http://twitter.github.com/bootstrap/customize.html>`_
 
