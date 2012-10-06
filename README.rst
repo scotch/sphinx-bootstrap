@@ -8,6 +8,7 @@ Demo
 Projects using it:
 ~~~~~~~~~~~~~~~
 - `EngineAuth <http://code.scotchmedia.com/engineauth>`_
+- `Vixo Documentation <http://documentation.vixo.com>`_
 
 Install
 --------
