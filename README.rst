@@ -33,15 +33,17 @@ Install
         'disqus_shortname': 'scotchmedia',
     }
 
-Themes
-------
+Building Instructions
+---------------------
 
-New themes can be created using the `bootstrap customizer <http://twitter.github.com/bootstrap/customize.html>`_
+When you first clone the repo, run:
 
-Once you have created a custom theme include it in that static
-directory and change the @import link to include your file. If you think the
-themes is one that others will like. Send a pull request.
+    git submodule init
+    git submodule update
 
+Then, to update the CSS files:
+
+    make build
 
 
 License
