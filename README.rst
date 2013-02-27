@@ -33,23 +33,21 @@ Install
         'disqus_shortname': 'scotchmedia',
     }
 
-3. Choose your theme. Edit `sphinx-bootstrap.css`. At the top of the file you will see this::
+Building Instructions
+---------------------
 
-    Uncomment the theme you would like to use.
+When you first clone the repo, run:
 
-    @import "bootstrap-engineauth.min.css";
-    /*@import "bootstrap-default.min.css";*/
-    /*@import "bootstrap-sapling.css";*/
+.. code::
 
-Themes
-------
+    git submodule init
+    git submodule update
 
-New themes can be created using the `bootstrap customizer <http://twitter.github.com/bootstrap/customize.html>`_
+Then, to update the CSS files:
 
-Once you have created a custom theme include it in that static
-directory and change the @import link to include your file. If you think the
-themes is one that others will like. Send a pull request.
+.. code::
 
+    make build
 
 
 License
