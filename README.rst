@@ -38,10 +38,14 @@ Building Instructions
 
 When you first clone the repo, run:
 
+.. code::
+
     git submodule init
     git submodule update
 
 Then, to update the CSS files:
+
+.. code::
 
     make build
 
